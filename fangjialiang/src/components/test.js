@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-12-17 19:22:30
- * @LastEditTime: 2020-12-17 19:54:28
+ * @LastEditTime: 2020-12-17 22:16:00
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /react-cli/react-cli/fangjialiang/src/components/test.js
@@ -51,12 +51,20 @@ class Test extends Component {
     
   }
 
+
+  clickOk=()=>{
+    console.log(this.props.clickH)
+    if(typeof this.props.clickH === 'function'){
+      this.props.clickH()
+    }
+  }
+
   render() {
     return (
       <React.Fragment>
         <p>累加1</p>
         <p>{this.state.n}</p>
-        <button onClick={this.addHandle1}>点击累加</button>
+        <button onClick={this.clickOk}>点击改变父组件中的值</button>
 
         <p>累加2</p>
         <p>{this.state.m}</p>

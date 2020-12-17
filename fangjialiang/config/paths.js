@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2020-12-16 16:16:48
+ * @LastEditTime: 2020-12-17 23:05:21
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: /react-cli/react-cli/fangjialiang/config/paths.js
+ */
 'use strict';
 
 const path = require('path');
@@ -15,6 +23,7 @@ const resolveApp = relativePath => path.resolve(appDirectory, relativePath);
 // single-page apps that may serve index.html for nested URLs like /todos/42.
 // We can't use a relative path in HTML because we don't want to load something
 // like /todos/42/static/js/bundle.7289d.js. We have to know the root.
+
 const publicUrlOrPath = getPublicUrlOrPath(
   process.env.NODE_ENV === 'development',
   require(resolveApp('package.json')).homepage,
